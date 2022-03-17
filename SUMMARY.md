@@ -1,3 +1,4 @@
 # Table of contents
 
-* [Page 1](README.md)
+* [Py-Edit](README.md)
+* [Installation](installation.md)
