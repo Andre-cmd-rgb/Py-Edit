@@ -7,6 +7,7 @@ from pathlib import Path
 from key_bindings import show_bindings
 import os
 
+
 # All Functions Here...
 # More comments to be added soon.
 def new():
@@ -130,6 +131,8 @@ def light_theme():
     textarea['cursor'] = 'arrow'
     sbar['bg'] = "sky blue"
     sbar['fg'] = "black"
+
+
 
 def cut():
     textarea.event_generate('<<Cut>>')
@@ -256,6 +259,7 @@ root.geometry(f"{width}x{height}")
 root.iconbitmap('icon.ico')
 root.title("Py Edit")
 
+
 # Tool bar or Menubar...
 menubar = Menu(root, bg="black")
 filemenu = Menu(menubar, tearoff=False)
@@ -314,6 +318,26 @@ textarea.bind('<Control-u>', underline)
 textarea.bind('<Control-o>', openfile_shortcut)
 textarea.bind('<Control-n>', new_shortcut)
 textarea.bind('<Control-s>', savefile_shortcut)
+
+# NOT WORKING
+# VVVVVVVVVVV
+
+#with open('theme.txt', 'r', 'a') as fle:
+ #   imtheme = fle.readlines(0)
+  #  if imtheme == 1:
+   #     dark_theme()
+    #else:
+     #   light_theme()
+    #fle.close()
+
+#file = open('theme.txt', 'r')
+# Reads the entire file at once and places the contents in memory.
+#read_content = file.read()
+#print(read_content)
+#if read_content == 1:
+ #   dark_theme()
+#else:
+ #   light_theme()
 
 # Root Configuration and Mainloop...
 root.config(menu=menubar)
