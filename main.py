@@ -133,7 +133,6 @@ def light_theme():
     sbar['fg'] = "black"
 
 
-
 def cut():
     textarea.event_generate('<<Cut>>')
     sbar['text'] = 'Status : Cut Text Successfully!'
@@ -247,6 +246,9 @@ def underline(event):
     textarea['font'] += " underline"
 
 
+
+
+
 # Initialization and Customizations...
 root = Tk()
 size = 18
@@ -318,6 +320,15 @@ textarea.bind('<Control-u>', underline)
 textarea.bind('<Control-o>', openfile_shortcut)
 textarea.bind('<Control-n>', new_shortcut)
 textarea.bind('<Control-s>', savefile_shortcut)
+
+
+
+
+ctheme = open("ctheme.txt", "w")
+if ctheme == 1:
+    colormenu.activate = dark_theme
+else:
+    colormenu.activate = light_theme 
 
 # NOT WORKING
 # VVVVVVVVVVV
